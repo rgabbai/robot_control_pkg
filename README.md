@@ -10,5 +10,7 @@ ros2 run robot_ctrl_pkg android_pub
 std_msgs::msg::String();
 
 ## Comunication codes:
-
 TBD
+
+## How to run 
+ros2 run robot_ctrl_pkg android_pub
