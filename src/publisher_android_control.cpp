@@ -92,6 +92,7 @@ int main(int argc, char *argv[]) {
   // Convert client's IP address from binary to text
   char clientIP[INET_ADDRSTRLEN];
   inet_ntop(AF_INET, &client.sin_addr, clientIP, INET_ADDRSTRLEN);
+  cout << "Before check - Connection from " << clientIP << " requsted." << endl;
 
   // Check if the client's IP matches the desired IP
   if (strcmp(clientIP, "10.242.57.245") != 0) {
@@ -105,7 +106,7 @@ int main(int argc, char *argv[]) {
   }  
 
   // Connection has been established, now send a message to the client
-  const char* welcomeMsg = "Robot server connected";
+  const char* welcomeMsg = "Robot online\n";
   int sendResult = send(clientSocket, welcomeMsg, strlen(welcomeMsg) + 1, 0);
   if (sendResult == -1) {
     cerr << "Failed to send message to client" << endl;
