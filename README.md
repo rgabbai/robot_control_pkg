@@ -2,13 +2,14 @@
 
 ## How to run:
 
-colcon build --Wno-dev
+colcon build 
+
 source install/setup.bash
+
 ros2 run robot_ctrl_pkg android_pub
 
 ## Topic MSG type
 std_msgs::msg::String();
 
 ## Comunication codes:
-
 TBD
